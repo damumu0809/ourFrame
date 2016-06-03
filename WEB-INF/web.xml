@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Copyright 2004 The Apache Software Foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+<!-- JSPC servlet mappings start -->
+	//????
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+        <servlet-name>SmartUploadServlet</servlet-name>
+        <servlet-class>com.upload.SmartUploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SmartDownloadServlet</servlet-name>
+        <servlet-class>com.upload.SmartDownloadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BatchDownloadServlet</servlet-name>
+        <servlet-class>com.upload.BatchDownloadServlet</servlet-class>
+    </servlet>
+	<servlet>
+		<servlet-name>VotePage</servlet-name>
+		</servlet-name>VotePage.VotePage</servlet-name>
+	</servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>SmartUploadServlet</servlet-name>
+        <url-pattern>/smartUploadServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SmartDownloadServlet</servlet-name>
+        <url-pattern>/smartDownloadServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BatchDownloadServlet</servlet-name>
+        <url-pattern>/batchDownloadServlet.do</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VotePage</servlet-name>
+		<url-pattern>/VotePage.VotePage</url-pattern>
+	</servlet-mapping>
+	
+	
+     <context-param>
+    <description>Location to store uploaded file</description>
+    <param-name>file-upload</param-name>
+    <param-value>
+         E:\apache-tomcat-8.0.33-windows-x64\apache-tomcat-8.0.33\webapps\data\
+     </param-value>
+  </context-param>
+	
+
+<!-- JSPC servlet mappings end -->
+
+</web-app>
